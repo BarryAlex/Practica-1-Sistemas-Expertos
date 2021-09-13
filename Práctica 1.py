@@ -9,9 +9,9 @@ os.system('mode con: cols=150 lines=40')
 print("Bienvenido a Clue: Lovecraft/Wilde")
 print(" ")
 print("El juego consiste en encontrar al culpable de un crimen que ha acontecido en el campus de una universidad, para ello contarás con 5 pistas que te ayudarán a resolver el \nmisterio.")
-print("Para ganar el juego debes de acertar quien fue el culpable, la escena del crímen y el arma con que se realizó el crímen, si fallas en encontrar al culpable, el lugar o el arma perderás el juego. Es decir, necesitas encontrar los 3 para poder ganar, con que falles en uno pierdes.")
+print("Para ganar el juego debes de acertar quien fue el culpable, la escena del crimen y el arma con que se realizó el crimen, si fallas en encontrar al culpable, el lugar o el arma perderás el juego. Es decir, necesitas encontrar los 3 para poder ganar, con que falles en uno pierdes.")
 print("")
-print("Cuando aparesca el mensaje al final de la pantalla 'Presiona ENTER o barra espaciadora' para avanzar hazlo, si presionas cualquier otra tecla puede que ocurra un error y se termine la ejecución del juego.")
+print("Cuando aparezca el mensaje al final de la pantalla 'Presiona ENTER o barra espaciadora' para avanzar, hazlo. Si presionas cualquier otra tecla puede que ocurra un error y se termine la ejecución del juego.")
 print("")
 print("El juego se juega unicamente con los numeros del 1 al 5, la barra espaciadora y el ENTER.")
 print("")
@@ -40,7 +40,7 @@ while ciclo == 1:
     os.system("cls")
 
     #Generación del sospechoso, arma y lugar
-    sospechoso = ["Randolph Carter", "Abdul Alhazred", "Swami Chandraputra", "Septimus Podgers", "Lord Murchinson"]
+    sospechoso = ["Randolph Carter", "Abdul", "Swami", "Podgers", "Maxwell"]
     SUS_R = random.randrange(0,5)
 
     armas = ["Cuchillo", "Libro", "Cuerda", "Veneno", "Máscara de piedra"]
@@ -76,13 +76,13 @@ while ciclo == 1:
     #print("Lugar crimen: ", place_R)
 
     #Historia
-    print("Haz sido invitado al campus de la Universidad de Miskatonic, en Arkham, donde se lleva a cabo una conferencia con 5 de las personas más reconocidas del mundo de lo \noculto y lo paranormal. Entre esas personas se encuentran:\n -> Randolph Carter, un investigador y explorador sobre la consiencia humana, los mundos ocultos, los dioses primigeneos y el conocimiento ignoto.\n -> Abdul Alhazred, un árabe que muchos tildan de loco por asegurar que uno de los dioses primigenos le dio el conocimiento neceasrio para escribir ""El Necronomicón"".\n -> El swami Chandraputra, un reconocido brujo dentro de la comunidad de lo oculto por sus extraños rituales para contactar seres de otra dimensión.\n -> Septimus Podgers, un famoso quiromántico debido a sus acertadas predicciónes en las personas, además de ser  un buen hipnotizador.\n -> Lord Murchinson, un señor de entrada edad quien en sus días dió clases sobre teología en la universidad y que ahora está metido en lo oculto.")
+    print("Has sido invitado al campus de la Universidad de Miskatonic, en Arkham, donde se lleva a cabo una conferencia con 5 de las personas más reconocidas del mundo de lo \noculto y lo paranormal. Entre esas personas se encuentran:\n -> Randolph Carter, un investigador y explorador sobre la consiencia humana, los mundos ocultos, los dioses primigenios y el conocimiento ignoto.\n -> Abdul Alhazred, un árabe que muchos tildan de loco por asegurar que uno de los dioses primigenios le dio el conocimiento neceasrio para escribir ""El Necronomicón"".\n -> El swami Chandraputra, un reconocido brujo dentro de la comunidad de lo oculto por sus extraños rituales para contactar seres de otra dimensión.\n -> Septimus Podgers, un famoso quiromántico debido a sus acertadas predicciones en las personas, además de ser  un buen hipnotizador.\n -> Lord Maxwell, un señor de entrada edad quien en sus días dio clases sobre teología en la universidad y que ahora está metido en lo oculto.")
 
     print("")
 
     print("Durante de la reunión después de la conferencia alguien grita horrorizado por alguna razón, al parecer han encontrado muerto a Robert Suydam, el organizador \nde la conferencia.")
     print("")
-    print("Robert Suydam era una persona muy reconocida no solo dentro de la comunidad, sino también en la universidad ya que acababa de asumir el puesto del decano hace 3 meses y\nera un viejo amigo de la familia.\nAl parecer, el era muy amigo de cada uno de los ponentes que estuvieron en la conferencia de hoy, ya que se le vio conviviendo de agradable manera con todos ellos. \nSin embargo, ninguno de ellos fue visto durante la hora a la que encontraron a Suydam, sino que aparecieron 1 hora después cuando se declaró cerrada la universidad por \nla policia, convirtiendolos en los principales sospechosos del asesinato.")
+    print("Robert Suydam era una persona muy reconocida no solo dentro de la comunidad, sino también en la universidad ya que acababa de asumir el puesto del decano hace 3 meses y\nera un viejo amigo de la familia.\nAl parecer, él era muy amigo de cada uno de los ponentes que estuvieron en la conferencia de hoy, ya que se le vio conviviendo de agradable manera con todos ellos. \nSin embargo, ninguno de ellos fue visto durante la hora a la que encontraron a Suydam, sino que aparecieron 1 hora después cuando se declaró cerrada la universidad por \nla policía, convirtiéndolos en los principales sospechosos del asesinato.")
 
     print("")
 
@@ -98,7 +98,7 @@ while ciclo == 1:
         #Investigación de sospechoso (ORIGINAL)
         ##########################################################################################################################################################################################
         if pista==1:
-            SUS_P = int(input(" 1) Randolph Carter \n 2) Abdul Alhazred \n 3) Swami Chandraputra \n 4) Septimus Podgers \n 5) Lord Murchinson\n"))
+            SUS_P = int(input(" 1) Randolph Carter \n 2) Abdul \n 3) Swami \n 4) Podgers \n 5) Maxwell\n"))
             if SUS_P==1:
                 if SUS_R==0:
                     print(sospechoso[0] + " dice que estuvo en " + Lugar_sample[0] + " y que no vio " + arma_sample[0] + " cerca de él.")
@@ -187,7 +187,7 @@ while ciclo == 1:
             else:
                 print("Entrada erronea, vuelva a intentar...")
                 while SUS_P!=(1 or 2 or 3 or 4 or 5):
-                    SUS_P = int(input(" 1) Randolph Carter \n 2) Abdul Alhazred \n 3) Swami Chandraputra \n 4) Septimus Podgers \n 5) Lord Murchinson\n"))
+                    SUS_P = int(input(" 1) Randolph Carter \n 2) Abdul\n 3) Swami\n 4) Podgers\n 5) Maxwell\n"))
                     if SUS_P==1:
                         if SUS_R==0:
                             print(sospechoso[0] + " dice que estuvo en " + Lugar_sample[0] + " y que no vio " + arma_sample[0] + " cerca de él.")
@@ -642,7 +642,7 @@ while ciclo == 1:
                 #Investigación de sospechoso (EN CASO DE ERROR)
                 ##########################################################################################################################################################################################
                 if pista==1:
-                    SUS_P = int(input(" 1) Randolph Carter \n 2) Abdul Alhazred \n 3) Swami Chandraputra \n 4) Septimus Podgers \n 5) Lord Murchinson\n"))
+                    SUS_P = int(input(" 1) Randolph Carter \n 2) Abdul \n 3) Swami \n 4) Podgers \n 5) Maxwell\n"))
                     if SUS_P==1:
                         if SUS_R==0:
                             print(sospechoso[0] + " dice que estuvo en " + Lugar_sample[0] + " y que no vio " + arma_sample[0] + " cerca de él.")
@@ -731,7 +731,7 @@ while ciclo == 1:
                     else:
                         print("Entrada erronea, vuelva a intentar...")
                         while SUS_P!=(1 or 2 or 3 or 4 or 5):
-                            SUS_P = int(input(" 1) Randolph Carter \n 2) Abdul Alhazred \n 3) Swami Chandraputra \n 4) Septimus Podgers \n 5) Lord Murchinson\n"))
+                            SUS_P = int(input(" 1) Randolph Carter \n 2) Abdul \n 3) Swami \n 4) Podgers \n 5) Maxwell\n"))
                             if SUS_P==1:
                                 if SUS_R==0:
                                     print(sospechoso[0] + " dice que estuvo en " + Lugar_sample[0] + " y que no vio " + arma_sample[0] + " cerca de él.")
@@ -1193,7 +1193,7 @@ while ciclo == 1:
 
 #Escogiendo al Culpable
 #####################################################################################################
-    SUS_F=int(input("El asesino fue...\n 1) Randolph Carter \n 2) Abdul Alhazred \n 3) Swami Chandraputra \n 4) Septimus Podgers \n 5) Lord Murchinson\n"))
+    SUS_F=int(input("El asesino fue...\n 1) Randolph Carter \n 2) Abdul Alhazred \n 3) Swami Chandraputra \n 4) Septimus Podgers \n 5) Lord Maxwell\n"))
 
     if SUS_F == 1:
         print("Haz elegido como culpable a: " + sospechoso[0])
@@ -1208,7 +1208,7 @@ while ciclo == 1:
     else:
         print("Esa es una respuesta inválida, vuelva a elegir")
         while SUS_F!=(1 or 2 or 3 or 4 or 5):
-            SUS_F=int(input("El asesino fue...\n 1) Randolph Carter \n 2) Abdul Alhazred \n 3) Swami Chandraputra \n 4) Septimus Podgers \n 5) Lord Murchinson\n"))
+            SUS_F=int(input("El asesino fue...\n 1) Randolph Carter \n 2) Abdul Alhazred \n 3) Swami Chandraputra \n 4) Septimus Podgers \n 5) Lord Maxwell\n"))
 
             if SUS_F == 1:
                 print("Haz elegido como culpable a: " + sospechoso[0])
@@ -1464,7 +1464,7 @@ while ciclo == 1:
     #############################################################################################################################################
     print("")
     if (culpable_final==sospechoso[SUS_R]) and (arma_fianl==weap_R) and (lugar_final==place_R):
-        print("Felicidades, has encontrado al culpable y los policias lo han detenido antes de que escapase")
+        print("Felicidades, has encontrado al culpable y los policías lo han detenido antes de que escapase")
     else:
         print("No todas tus pistas han sido correctas, por lo que el culpable se ha ido del lugar")
 #Bucle

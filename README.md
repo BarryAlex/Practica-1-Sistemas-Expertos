@@ -3,7 +3,7 @@ Practica 1, juego estilo Clue
 
 Esta práctica consiste en recrear el juego Clue, donde contaremos con 5 sospechosos, 5 armas y 5 lugares para desarrollar 5 historias diferentes
 
-Para ganar el juego se necesita acertar en quién fue el sospechozo, el lugar del crimen y el arma del crimen. Si se falla aunque sea en alguno, pierdes el juego.
+Para ganar el juego se necesita acertar en quién fue el sospechoso, el lugar del crimen y el arma del crimen. Si se falla aunque sea en alguno, pierdes el juego.
 
 Cada historia será creada por un random al iniciar la partida
 
